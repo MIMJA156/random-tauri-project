@@ -32,7 +32,7 @@ jobs:
         uses: dtolnay/rust-toolchain@stable
 
       - name: install dependencies (ubuntu only)
-        if: matrix.platform == 'ubuntu-20.04'
+        if: matrix.platform.os == 'ubuntu-20.04'
         run: |
           sudo apt-get update
           sudo apt-get install -y libgtk-3-dev libwebkit2gtk-4.0-dev libappindicator3-dev librsvg2-dev patchelf
@@ -42,7 +42,7 @@ jobs:
 
       - uses: "mimja156/tauri-build-action@main"
         env:
-          GITHUB_TOKEN: token-token-token
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           arch: ${{ matrix.platform.arch }}
           release-tag: App-$VERSION
