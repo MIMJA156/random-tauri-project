@@ -48,6 +48,8 @@ jobs:
       - uses: "mimja156/tauri-build-action@main"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TAURI_KEY_PASSWORD: ${{ secrets.TAURI_KEY_PASSWORD }}
+          TAURI_PRIVATE_KEY: ${{ secrets.TAURI_PRIVATE_KEY }}
         with:
           arch: ${{ matrix.platform.arch }}
           release-tag: App-$VERSION
