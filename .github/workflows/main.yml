@@ -15,7 +15,6 @@ jobs:
           [
             { os: macos-latest, arch: silicon },
             { os: macos-latest, arch: intel },
-            { os: ubuntu-20.04, arch: none },
             { os: windows-latest, arch: none },
           ]
 
