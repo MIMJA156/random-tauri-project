@@ -54,3 +54,4 @@ jobs:
           release-tag: App-$VERSION
           release-name: App $VERSION
           release-body: This release was auto generated using github actions!
+          projectPath: "./tauri-app"
