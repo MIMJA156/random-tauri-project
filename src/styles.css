@@ -21,7 +21,7 @@ body {
     border: 8px solid #15171b;
 }
 
-span {
+span.title {
     font-size: 10rem;
     color: grey;
 }
@@ -40,6 +40,16 @@ button {
     color: lightgray;
 }
 
+button.update {
+    background-color: #007bff;
+    color: #fff;
+
+    border: none;
+    box-shadow: 0 0 10px #007bff;
+
+    font-size: larger;
+}
+
 .titlebar {
     height: 30px;
     background: #15171b;
@@ -50,4 +60,26 @@ button {
     top: 0;
     left: 0;
     right: 0;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #23262e;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: slideIn 0.5s ease forwards;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
 }
