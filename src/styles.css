@@ -50,18 +50,6 @@ button.update {
     font-size: larger;
 }
 
-.titlebar {
-    height: 30px;
-    background: #15171b;
-    user-select: none;
-    display: flex;
-    justify-content: flex-end;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-}
-
 .modal {
     display: none;
     position: fixed;

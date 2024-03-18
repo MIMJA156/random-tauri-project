@@ -25,9 +25,6 @@
         },
         "windows": [
             {
-                "decorations": false,
-                "fullscreen": false,
-                "resizable": true,
                 "title": "random-tauri-project",
                 "width": 800,
                 "height": 600
