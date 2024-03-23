@@ -12,7 +12,7 @@
     },
     "tauri": {
         "allowlist": {
-            "all": true
+            "all": false
         },
         "bundle": {
             "active": true,
@@ -26,8 +26,8 @@
         "windows": [
             {
                 "title": "random-tauri-project",
-                "width": 800,
-                "height": 600
+                "width": 500,
+                "height": 300
             }
         ],
         "updater": {

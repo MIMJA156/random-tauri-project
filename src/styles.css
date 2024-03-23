@@ -50,8 +50,7 @@ button.update {
     font-size: larger;
 }
 
-.modal {
-    display: none;
+div.modal {
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -60,14 +59,39 @@ button.update {
     border-radius: 5px;
     padding: 15px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+div.modal.slideIn {
     animation: slideIn 0.5s ease forwards;
+}
+
+div.modal.slideOut {
+    animation: slideOut 0.5s ease forwards;
+}
+
+div.modal.hidden {
+    display: none;
+}
+
+div.modal.error {
+    color: salmon;
+    font-size: 22px;
 }
 
 @keyframes slideIn {
     from {
-        transform: translateY(100%);
+        transform: translateY(200%);
     }
     to {
         transform: translateY(0);
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(200%);
     }
 }
