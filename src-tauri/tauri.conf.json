@@ -26,7 +26,7 @@
       "endpoints": [
         "https://github.com/MIMJA156/random-tauri-project/releases/latest/download/updater.json"
       ],
-      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDc2M0Q5M0NDQzBBNkUzQkYKUldTLzQ2YkF6Sk05ZGozaTdwQjQvNXJEaG1QU0Y5c0c2cmlmeVU0Qm0wNENXKy9ZT1UzdzFHb2wK"
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDQ5RDQyNzdCNEQ4RTUwRTgKUldUb1VJNU5leWZVU1VLSWdLdWlnVnhsa1V0bWVCWXpYRUd0OUNoUkF6ZzdCS1VzU2tCWDRjaUMK"
     }
   },
   "app": {
