@@ -1,6 +1,6 @@
 import { getVersion } from "@tauri-apps/api/app";
-import { relaunch } from "@tauri-apps/api/process";
-import { checkUpdate, installUpdate, onUpdaterEvent } from "@tauri-apps/api/updater";
+import { relaunch } from "@tauri-apps/plugin-process";
+import { check } from "@tauri-apps/plugin-updater";
 
 window.addEventListener("DOMContentLoaded", async () => {
     const version_span = document.getElementById("version-span");
@@ -10,17 +10,14 @@ window.addEventListener("DOMContentLoaded", async () => {
 
     //--
 
-    await onUpdaterEvent(({ error, status }) => {
-        console.log("Updater event", error, status);
-    });
-
     try {
-        const { shouldUpdate, manifest } = await checkUpdate();
+        const update = await check();
 
-        if (shouldUpdate) {
-            console.log(`Installing update ${manifest?.version}, ${manifest?.date}, ${manifest?.body}`);
+        if (update?.available) {
+            console.log(`Installing update ${update?.version}, ${update?.date}, ${update?.body}`);
             showUpdateAlertModal(async () => {
-                await installUpdate();
+                await update.downloadAndInstall();
+                await update.close();
                 await relaunch();
             });
         }
