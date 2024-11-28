@@ -15,7 +15,7 @@
       "icons/icon.icns",
       "icons/icon.ico"
     ],
-    "createUpdaterArtifacts": "v1Compatible"
+    "createUpdaterArtifacts": true
   },
   "productName": "random-tauri-project",
   "mainBinaryName": "random-tauri-project",
